@@ -1,5 +1,5 @@
 //module层 查询数据库 并返回数据
-const po = require('./pool');
+const  po = require('./pool');
 const admin = po.import('../schema/user');
 const bcrypt = require('bcrypt')
 admin.sync({force:false});

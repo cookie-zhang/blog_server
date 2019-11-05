@@ -38,7 +38,7 @@ app.use(require('koa-static')(__dirname + '/public'));
 // routes definition
 app.use(index.routes(), index.allowedMethods());
 app.use(users.routes(), users.allowedMethods());
-app.use(article.routes(), article.allowedMethods());
+app.use(article.routes(), createArticle.allowedMethods());
 
 // error-handling
 app.on('error', (err:any, ctx:Object) => {
