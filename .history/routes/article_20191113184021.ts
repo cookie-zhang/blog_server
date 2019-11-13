@@ -10,8 +10,12 @@ router.post("/articleList",function *(this:Context){
     yield articleController.list(this)
   });
 
-router.get("/articleDetail",function *(this:Context,next:Function){
-  yield articleController.articleDetail(this)
+  router.get("/detail/:id",function *(this:Context){
+    yield articleController.list(this)
+  });
+
+router.get("/user/:id",function *(this:Context,next:Function){
+  yield articleController.detail(this)
 });
 
 

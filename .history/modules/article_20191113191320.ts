@@ -18,6 +18,7 @@ class  articleModel{
   }
   //由id查询文章
   static async articleDetail(id:any) {
+    
     return await article.findOne({ where:{ id } })
   }
 

@@ -8,10 +8,14 @@ router.post("/createArticle",function *(this:Context){
 
 router.post("/articleList",function *(this:Context){
     yield articleController.list(this)
-  });
+  });articleDetail
 
-router.get("/articleDetail",function *(this:Context,next:Function){
-  yield articleController.articleDetail(this)
+  router.post("/articleList",function *(this:Context){
+    yield articleController.list(this)
+  });articleDetail
+
+router.get("/user/:id",function *(this:Context,next:Function){
+  yield articleController.detail(this)
 });
 
 

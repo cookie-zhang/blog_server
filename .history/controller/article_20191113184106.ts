@@ -44,25 +44,8 @@ class articleController {
       }
   }
 
-  //查询文章详情
-  static async articleDetail(ctx: any) {
-      let req = ctx.query.id
-      console.log(req)
-        try {
-            const data = await articleModel.articleDetail(req);
-            ctx.body = {
-              code: '200',
-              message: "查询成功",
-              data
-          }
-        } catch (err) {
-          ctx.body = {
-            code: "412",
-            message: "查询失败",
-            data: err
-          }
-        }
-    }
+  //查询
+
 
 }
 

@@ -14,5 +14,9 @@ router.get("/articleDetail",function *(this:Context,next:Function){
   yield articleController.articleDetail(this)
 });
 
+// router.get("/user/:id",function *(this:Context,next:Function){
+//   yield articleController.detail(this)
+// });
+
 
 module.exports = router;

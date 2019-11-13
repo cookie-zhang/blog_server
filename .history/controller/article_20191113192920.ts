@@ -46,8 +46,8 @@ class articleController {
 
   //查询文章详情
   static async articleDetail(ctx: any) {
-      let req = ctx.query.id
-      console.log(req)
+      let req = ctx.request.body
+      console.log
         try {
             const data = await articleModel.articleDetail(req);
             ctx.body = {

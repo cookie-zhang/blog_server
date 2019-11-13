@@ -45,11 +45,10 @@ class articleController {
   }
 
   //查询文章详情
-  static async articleDetail(ctx: any) {
-      let req = ctx.query.id
-      console.log(req)
+  static async list(ctx: any) {
+      let req = ctx.request.body
         try {
-            const data = await articleModel.articleDetail(req);
+            const data = await articleModel.articleList(req);
             ctx.body = {
               code: '200',
               message: "查询成功",

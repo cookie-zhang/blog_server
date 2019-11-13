@@ -16,15 +16,8 @@ class  articleModel{
       content: data.content,// 内容
     })
   }
-  //由id查询文章
-  static async articleDetail(id:any) {
-    return await article.findOne({ where:{ id } })
-  }
-
-  //查询列表
   static async articleList() {
     return await article.findAll({order:[['id', 'DESC']]})
   }
-
 }
 module.exports = articleModel;
