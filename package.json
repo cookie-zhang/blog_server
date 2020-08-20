@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@types/sequelize": "^4.28.6",
-    "bcrypt": "^3.0.6",
+    "bcrypt": "^5.0.0",
     "co": "^4.6.0",
     "debug": "^2.6.3",
     "jade": "~1.11.0",
